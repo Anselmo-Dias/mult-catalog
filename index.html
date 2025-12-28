@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Catálogo Premium</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="app">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Catálogo <span>Premium</span></h1>
+                <p>Não vendemos apenas potes. Oferecemos consultoria.</p>
+            </div>
+
+            <div class="search-box">
+                <input id="searchInput" placeholder="Buscar suplemento..." />
+            </div>
+
+            <div class="categories">
+                <button data-cat="all" class="active">Todos</button>
+                <button data-cat="mass">Ganho de Massa</button>
+                <button data-cat="energy">Energia / Pré</button>
+                <button data-cat="health">Saúde</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container">
+        <h2 id="count">Carregando...</h2>
+        <div id="grid" class="grid"></div>
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button id="closeModal" class="modal-close-btn">×</button>
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-cta">
+                <h2>Não sabe o que escolher?</h2>
+                <p>Nosso time de especialistas monta seu protocolo de suplementação baseado no seu objetivo atual.</p>
+                <a href="#" id="whatsapp-link" class="whatsapp-btn" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.882-.524-5.579-1.476l-6.353 1.681zm6.354-1.807l.124-.073c1.522-.899 3.27-1.396 5.105-1.397 5.465 0 9.92-4.455 9.921-9.921.001-5.466-4.455-9.921-9.921-9.921-5.466.001-9.921 4.455-9.921 9.921.001 2.031.579 3.96 1.6 5.66l.073.125l-1.116 4.069 4.14-1.088z"/></svg>
+                    Consultoria Gratuita no WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Mult Supplements - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
